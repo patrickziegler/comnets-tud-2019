@@ -1,0 +1,6 @@
+numpy
+docker
+ryu
+networkx
+matplotlib
+PyQt5

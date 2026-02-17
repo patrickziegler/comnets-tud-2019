@@ -1,0 +1,20 @@
+FROM ubuntu:18.04
+
+RUN \
+    apt-get update && \
+    apt-get -y upgrade && \
+    apt-get install -y \
+        build-essential \
+        net-tools \
+        iproute2 \
+        iputils-ping \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        stress \
+        iperf \
+        iperf3 \
+    && rm -rf /var/lib/apt/lists/*
+    && curl -sSL https://get.docker.com/ | sh
+
+CMD ["/bin/bash"]

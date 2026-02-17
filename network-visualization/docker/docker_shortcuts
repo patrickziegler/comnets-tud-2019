@@ -1,0 +1,3 @@
+alias docker-kill-all="docker kill `docker ps -q`"
+alias docker-rm-all="docker rm `docker ps -aq`"
+alias docker-rmi-untagged="docker rmi `docker images | grep '^<none>' | awk '{print $3}'`"
